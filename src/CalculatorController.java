@@ -6,7 +6,7 @@ public class CalculatorController {
         Calculator calculator = new Calculator();
 
         System.out.println("Введите арифметическое действие:");
-        String operator = scanner.nextLine();
+        String operator = scanner.nextLine(); //вот тут проблемка, что он скипает при вопросе из-за nextLine()
         calculator.setOperator(operator);
 
         System.out.println("Введите первое число:");
@@ -80,7 +80,7 @@ class Calculator {
     }
     //вывод результата
     void printResult() {
-        System.out.println("Ответ: " + result);
+        System.out.println("Ответ: " + result); //это можно было засунуть в метод calculateResult()
     }
 
 
