@@ -5,13 +5,14 @@ public class CalculatorController {
         Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
 
-        System.out.println("Введите арифметическое действие:");
-        String operator = scanner.nextLine(); //вот тут проблемка, что он скипает при вопросе из-за nextLine()
-        calculator.setOperator(operator);
 
         System.out.println("Введите первое число:");
         int value1 = scanner.nextInt();
         calculator.setValue1(value1);
+
+        System.out.println("Введите арифметическое действие: ");
+        char operator = scanner.next().charAt(0);
+        calculator.setOperator(operator);
 
         System.out.println("Введите второе число:");
         int value2 = scanner.nextInt();
@@ -27,7 +28,7 @@ public class CalculatorController {
 class Calculator {
     private int value1;
     private int value2;
-    private String operator;
+    private char operator;
     private int result;
 
 
@@ -40,7 +41,7 @@ class Calculator {
         this.value2 = value2;
     }
 
-    void setOperator(String operator) {
+    void setOperator(char operator) {
         this.operator = operator;
     }
 
@@ -62,16 +63,16 @@ class Calculator {
     void calculateResult() {
 
         switch (operator) {
-            case "+":
+            case '+':
                 result = value1 + value2;
                 break;
-            case "-":
+            case '-':
                 result = value1 - value2;
                 break;
-            case "*":
+            case '*':
                 result = value1 * value2;
                 break;
-            case "/":
+            case '/':
                 result = value1 / value2;
                 break;
             default:
