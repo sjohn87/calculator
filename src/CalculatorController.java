@@ -39,7 +39,7 @@ class Calculator {
     void setOperator() {
         System.out.println("Введите арифметическое действие:");
         operator = scanner.next().charAt(0);
-        if (operator != '+' || operator != '-' || operator != '*' || operator != '/') {
+        if (Character.isLetterOrDigit(operator)) {
             throw new IllegalArgumentException("Требуется ввести знак арифметическго действия!");
         }
     }
