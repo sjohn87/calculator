@@ -1,1 +1,1 @@
-Calculator as a practice task.
+Simple console calculator as a practice task.
