@@ -1,1 +1,1 @@
-Simple console calculator as a practice task.
+Basic console calculator.
